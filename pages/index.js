@@ -5,7 +5,7 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    router.push('/movies');
+    router.push('/movies/movies');
   }, []);
 
   return null;
