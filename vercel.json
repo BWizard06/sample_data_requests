@@ -1,8 +1,12 @@
 {
     "functions": {
-      "api/**/*.js": {
+      "api/movies/get.js": {
+        "memory": 512,
+        "maxDuration": 10
+      },
+      "api/restaurants/get.js": {
         "memory": 512,
         "maxDuration": 10
       }
     }
-}
+  }
