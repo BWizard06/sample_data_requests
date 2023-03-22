@@ -13,6 +13,8 @@ export default async (req, res) => {
             .sort({ metacritic: -1 })
             .limit(parseInt(limit))
             .toArray()
+            
+            
 
         res.json(movies);
     } catch (e) {
