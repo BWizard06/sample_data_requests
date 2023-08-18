@@ -12,7 +12,9 @@ export default async (req, res) => {
             .find({ title: {$regex: title, $options: 'i'} })
             .sort({ metacritic: -1 })
             .limit(parseInt(limit))
-            .toArray();
+            .toArray()
+            
+            
 
         res.json(movies);
     } catch (e) {
