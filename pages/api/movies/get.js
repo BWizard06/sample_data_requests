@@ -9,7 +9,7 @@ export default async (req, res) => {
 
         const movies = await db
             .collection("movies")
-            .find({ title: {$regex: title, $options: '-i'} })
+            .find({ title: {$regex: title, $options: 'i'} })
             .sort({ metacritic: -1 })
             .limit(parseInt(limit))
             .toArray();
@@ -17,6 +17,6 @@ export default async (req, res) => {
         res.json(movies);
     } catch (e) {
         console.error(e);
-        res.status(500).send("Error fetching movies");
+        res.status(500).json("Error fetching movies");
     }
 };
